@@ -112,7 +112,7 @@
                                         <connections>
                                             <outlet property="commentsLabel" destination="4az-oP-7ai" id="9Hd-60-0ON"/>
                                             <outlet property="infoLabel" destination="D0F-g7-f1t" id="yfA-PS-u6u"/>
-                                            <outlet property="thumbnailImage" destination="XlT-aX-7kw" id="mNH-9s-FDN"/>
+                                            <outlet property="thumbnailImageView" destination="XlT-aX-7kw" id="Kzk-tY-EeE"/>
                                             <outlet property="titleLabel" destination="af5-M7-YAC" id="VlD-Lv-24i"/>
                                         </connections>
                                     </tableViewCell>

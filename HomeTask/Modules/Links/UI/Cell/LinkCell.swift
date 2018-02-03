@@ -20,12 +20,14 @@ class LinkCell: UITableViewCell {
     
     // MARK: - Private Properties -
     
+    private var thumbnailTask: URLSessionTask?
+    
     // MARK: IBOutlets
 
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var infoLabel: UILabel!
     @IBOutlet private weak var commentsLabel: UILabel!
-    @IBOutlet private weak var thumbnailImage: UIImageView!
+    @IBOutlet private weak var thumbnailImageView: UIImageView!
     
     // MARK: - Lifecycle
     
@@ -39,6 +41,10 @@ class LinkCell: UITableViewCell {
         titleLabel.text = nil
         infoLabel.text = nil
         commentsLabel.text = nil
+        
+        thumbnailTask?.cancel()
+        thumbnailTask = nil
+        thumbnailImageView.image = nil
     }
     
     // MARK: - Private methods -
@@ -51,6 +57,11 @@ class LinkCell: UITableViewCell {
         titleLabel.text = item.title
         infoLabel.text = item.author
         commentsLabel.text = "\(item.commentsCount)"
+        
+        if let thumbnailURL = item.thumbnailURL {
+            thumbnailTask = thumbnailImageView?.setImage(with: thumbnailURL)
+        }
+
     }
     
 }

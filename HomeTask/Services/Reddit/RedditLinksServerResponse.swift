@@ -15,11 +15,30 @@ struct RedditLinksServerResponse: Decodable {
         struct Child: Decodable {
             
             struct Data: Decodable {
+                
+                struct Preview: Decodable {
+                    
+                    struct Image: Decodable {
+                        
+                        struct Source: Decodable {
+                            let url: String
+                        }
+                        
+                        let source: Source
+                        
+                    }
+                    
+                    let images: [Image]
+                    
+                }
+                
                 let title: String
                 let author: String
                 let created: TimeInterval
                 let num_comments: Int
                 let thumbnail: String?
+                let preview: Preview?
+                
             }
             
             let data: Data

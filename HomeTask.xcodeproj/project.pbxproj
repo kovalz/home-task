@@ -26,6 +26,7 @@
 		25C0CD0020261B0100767431 /* RedditLinksServerResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCFF20261B0100767431 /* RedditLinksServerResponse.swift */; };
 		25C0CD03202624B000767431 /* RedditService+LinksListDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CD02202624B000767431 /* RedditService+LinksListDataSource.swift */; };
 		25C0CD0720263FD000767431 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CD0620263FD000767431 /* Dynamic.swift */; };
+		25C0CD0D2026677D00767431 /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CD0C2026677D00767431 /* UIImageView+URL.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		25C0CCFF20261B0100767431 /* RedditLinksServerResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditLinksServerResponse.swift; sourceTree = "<group>"; };
 		25C0CD02202624B000767431 /* RedditService+LinksListDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RedditService+LinksListDataSource.swift"; sourceTree = "<group>"; };
 		25C0CD0620263FD000767431 /* Dynamic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dynamic.swift; sourceTree = "<group>"; };
+		25C0CD0C2026677D00767431 /* UIImageView+URL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+URL.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -236,6 +238,7 @@
 		25C0CD0420263FA300767431 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				25C0CD0B2026676100767431 /* UIKit */,
 				25C0CD0520263FBF00767431 /* Observer */,
 			);
 			path = Utils;
@@ -247,6 +250,14 @@
 				25C0CD0620263FD000767431 /* Dynamic.swift */,
 			);
 			path = Observer;
+			sourceTree = "<group>";
+		};
+		25C0CD0B2026676100767431 /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				25C0CD0C2026677D00767431 /* UIImageView+URL.swift */,
+			);
+			path = UIKit;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -362,6 +373,7 @@
 				25C0CCE62025D00100767431 /* LinksViewModelProtocol.swift in Sources */,
 				25C0CCF62025E3D200767431 /* Link.swift in Sources */,
 				25C0CD03202624B000767431 /* RedditService+LinksListDataSource.swift in Sources */,
+				25C0CD0D2026677D00767431 /* UIImageView+URL.swift in Sources */,
 				25C0CCFA2025E77500767431 /* LinksDataSource.swift in Sources */,
 				25C0CCBC2025C45400767431 /* AppDelegate.swift in Sources */,
 				25C0CCF32025D4BD00767431 /* LinkCell.swift in Sources */,
