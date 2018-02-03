@@ -1,5 +1,5 @@
 //
-//  LinksListViewController.swift
+//  LinksViewController.swift
 //  HomeTask
 //
 //  Created by Zhenya Koval on 2/3/18.
@@ -8,12 +8,16 @@
 
 import UIKit
 
-class LinksListViewController: UIViewController {
+class LinksViewController: UIViewController {
 
+    var viewModel: LinksViewModelProtocol!
+    
     // MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.reloadItems()
     }
     
     // MARK: - Navigation
@@ -31,7 +35,7 @@ class LinksListViewController: UIViewController {
 
 // MARK: - UITableViewDataSource
 
-extension LinksListViewController: UITableViewDataSource {
+extension LinksViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1

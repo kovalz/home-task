@@ -15,7 +15,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        guard let navigationController = window?.rootViewController as? UINavigationController else {
+            fatalError("AppDelegate: invalid window.rootViewController")
+        }
+        
+        guard let viewController = navigationController.viewControllers.first as? LinksViewController else {
+            fatalError("AppDelegate: invalid navigationController.viewControllers.first")
+        }
+        
+        let reddit = RedditService()
+        let viewModel = LinksViewModel(dataSource: reddit)
+        viewController.viewModel = viewModel
+        
         return true
     }
 

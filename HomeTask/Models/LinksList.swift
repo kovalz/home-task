@@ -1,5 +1,5 @@
 //
-//  LinksListViewModelProtocol.swift
+//  LinksList.swift
 //  HomeTask
 //
 //  Created by Zhenya Koval on 2/3/18.
@@ -8,6 +8,13 @@
 
 import Foundation
 
-protocol LinksListViewModelProtocol {
+struct LinksList {
+    
+    struct Paging {
+        let after: String
+    }
+
+    let links: [Link]
+    let paging: Paging
     
 }
