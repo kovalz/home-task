@@ -11,7 +11,7 @@ import Foundation
 struct Link {
     let title: String
     let author: String
-    let created: Date
+    let creationDate: Date
     let commentsCount: Int
     let thumbnailURL: URL?
 }

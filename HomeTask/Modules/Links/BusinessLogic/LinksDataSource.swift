@@ -8,19 +8,19 @@
 
 import Foundation
 
-struct Paging {
-    static let defaultLimit = 25
+struct Paging {    
+    let after: String?
+    let limit: Int?
     
-    let after: String
-    let limit: Int
-    
-    init(after: String, limit: Int = Paging.defaultLimit) {
+    init(after: String? = nil, limit: Int? = nil) {
         self.after = after
         self.limit = limit
     }
 }
 
 protocol LinksDataSource {
+    
+    var isLoading: Bool { get }
     
     func loadLinks(paging: Paging?,
                    success: @escaping (_ links: LinksList) -> (),

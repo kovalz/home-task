@@ -8,7 +8,17 @@
 
 import Foundation
 
+struct LinkItem {
+    let title: String
+    let author: String
+    let creationDate: Date
+    let commentsCount: Int
+    let thumbnailURL: URL?
+}
+
 protocol LinksViewModelProtocol {
+    
+    var items: Dynamic<[LinkItem]> { get }
     
     func reloadItems()
     func loadMoreItems()

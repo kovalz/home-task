@@ -52,18 +52,24 @@ class RedditService {
 
     }
     
+    // MARK: - Public properties
+    
+    private (set) var isLoading = false
+
     // MARK: - Public methods
     
     func loadTopLinks(paging: Paging? = nil,
                       success: @escaping (_ links: LinksList) -> (),
                       failure: @escaping (_ error: Error) -> ())
     {
-        var parameters = [RequestParameter]()
-        if let paging = paging {
-            parameters.append(.after(fullName: paging.after))
-            parameters.append(.limit(paging.limit))
+        guard isLoading == false else {
+            return
         }
         
+        var parameters = [RequestParameter]()
+        paging?.limit.flatMap { parameters.append(.limit($0)) }
+        paging?.after.flatMap { parameters.append(.after(fullName: $0)) }
+
         guard let url = EndPoints.topLinks.createURL(with: parameters) else {
             DispatchQueue.main.async {
                 failure(ErrorKind.unableToCreateURL)
@@ -71,25 +77,38 @@ class RedditService {
             return
         }
         
+        isLoading = true
         let task = URLSession.shared.dataTask(with: url) { [weak self] (jsonData, response, error) in
             guard let strongSelf = self else {
                 return
             }
             
             if let error = error {
-                failure(error)
+                DispatchQueue.main.async { [weak self] in
+                    self?.isLoading = false
+                    failure(error)
+                }
                 return
             }
             
             if let jsonData = jsonData {
                 do {
                     let links = try strongSelf.decodeLinks(from: jsonData)
-                    success(links)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.isLoading = false
+                        success(links)
+                    }
                 } catch let error {
-                    failure(error)
+                    DispatchQueue.main.async { [weak self] in
+                        self?.isLoading = false
+                        failure(error)
+                    }
                 }
             } else {
-                failure(ErrorKind.emptyResponseData)
+                DispatchQueue.main.async { [weak self] in
+                    self?.isLoading = false
+                    failure(ErrorKind.emptyResponseData)
+                }
             }
         }
         
@@ -104,7 +123,7 @@ class RedditService {
         let links = serverLinks.data.children.map {
             return Link(title: $0.data.title,
                         author: $0.data.author,
-                        created: Date(),
+                        creationDate: Date(timeIntervalSince1970: $0.data.created),
                         commentsCount: $0.data.num_comments,
                         thumbnailURL: $0.data.thumbnail.flatMap { URL(string: $0) } )
         }
