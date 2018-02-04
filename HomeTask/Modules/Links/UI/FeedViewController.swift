@@ -1,5 +1,5 @@
 //
-//  LinksViewController.swift
+//  FeedViewController.swift
 //  HomeTask
 //
 //  Created by Zhenya Koval on 2/3/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class LinksViewController: UIViewController {
+class FeedViewController: UIViewController {
 
     // MARK: - Public Properties -
     
-    var viewModel: LinksViewModelProtocol? {
+    var viewModel: FeedViewModelProtocol? {
         didSet {
             if isViewLoaded {
                 bindViewModel()
@@ -96,7 +96,7 @@ class LinksViewController: UIViewController {
 
 // MARK: - UITableViewDataSource -
 
-extension LinksViewController: UITableViewDataSource {
+extension FeedViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.items.value.count ?? 0
@@ -104,10 +104,10 @@ extension LinksViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let viewModel = viewModel else {
-            fatalError("LinksViewController: viewModel should exist for creating cell.")
+            fatalError("FeedViewController: viewModel should exist for creating cell.")
         }
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "LinkCell", for: indexPath) as! LinkCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "FeedCell", for: indexPath) as! FeedCell
         let item = viewModel.items.value[indexPath.row]
         cell.item = item
         return cell
@@ -117,11 +117,11 @@ extension LinksViewController: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate -
 
-extension LinksViewController: UITableViewDelegate {
+extension FeedViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         guard let viewModel = viewModel else {
-            fatalError("LinksViewController: viewModel should exist for displaying cell.")
+            fatalError("FeedViewController: viewModel should exist for displaying cell.")
         }
         
         if indexPath.row > viewModel.items.value.count - tableView.visibleCells.count {
@@ -133,7 +133,7 @@ extension LinksViewController: UITableViewDelegate {
 
 // MARK: - Navigation -
 
-extension LinksViewController {
+extension FeedViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard

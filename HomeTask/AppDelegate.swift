@@ -17,14 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         guard
             let navigationController = window?.rootViewController as? UINavigationController,
-            let viewController = navigationController.viewControllers.first as? LinksViewController
+            let viewController = navigationController.viewControllers.first as? FeedViewController
         else {
             fatalError("AppDelegate: invalid rootViewController.")
         }
         
         let reddit = RedditService()
         let alertNotificationCenter = AlertNotificationCenter(rootViewController: viewController)
-        let viewModel = LinksViewModel(dataSource: reddit, userNotificationCenter: alertNotificationCenter)
+        let viewModel = FeedViewModel(dataSource: reddit, userNotificationCenter: alertNotificationCenter)
         viewController.viewModel = viewModel
         
         return true

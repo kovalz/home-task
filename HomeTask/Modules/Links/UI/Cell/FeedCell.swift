@@ -1,5 +1,5 @@
 //
-//  LinkCell.swift
+//  FeedCell.swift
 //  HomeTask
 //
 //  Created by Zhenya Koval on 2/3/18.
@@ -8,11 +8,11 @@
 
 import UIKit
 
-class LinkCell: UITableViewCell {
+class FeedCell: UITableViewCell {
 
     // MARK: - Public Properties -
     
-    var item: LinkItem? {
+    var item: FeedItem? {
         didSet {
             updateUI()
         }
@@ -78,14 +78,14 @@ class LinkCell: UITableViewCell {
     
 }
 
-// MARK: - UIView + LinkCell -
+// MARK: - UIView + FeedCell -
 
 extension UIView {
     
-    var linkCell: LinkCell? {
+    var linkCell: FeedCell? {
         var view: UIView? = self
         while view != nil {
-            if let cell = view?.superview as? LinkCell {
+            if let cell = view?.superview as? FeedCell {
                 return cell
             }
             

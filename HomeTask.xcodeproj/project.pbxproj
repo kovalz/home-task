@@ -13,16 +13,16 @@
 		2524044620279611008F46A9 /* URL+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044520279611008F46A9 /* URL+Image.swift */; };
 		252404492027983E008F46A9 /* UserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252404482027983E008F46A9 /* UserNotificationCenter.swift */; };
 		2524044B202798D7008F46A9 /* AlertNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044A202798D7008F46A9 /* AlertNotificationCenter.swift */; };
+		2524044D2027B795008F46A9 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044C2027B795008F46A9 /* FeedViewModel.swift */; };
+		2524044F2027B8A6008F46A9 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044E2027B8A6008F46A9 /* FeedCell.swift */; };
 		25C0CCBC2025C45400767431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCBB2025C45400767431 /* AppDelegate.swift */; };
 		25C0CCC12025C45400767431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCBF2025C45400767431 /* Main.storyboard */; };
 		25C0CCC32025C45400767431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCC22025C45400767431 /* Assets.xcassets */; };
 		25C0CCC62025C45400767431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCC42025C45400767431 /* LaunchScreen.storyboard */; };
 		25C0CCD12025C45400767431 /* HomeTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCD02025C45400767431 /* HomeTaskTests.swift */; };
-		25C0CCE02025CF6C00767431 /* LinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCDF2025CF6C00767431 /* LinksViewController.swift */; };
-		25C0CCE42025CFB400767431 /* LinksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCE32025CFB400767431 /* LinksViewModel.swift */; };
-		25C0CCE62025D00100767431 /* LinksViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCE52025D00100767431 /* LinksViewModelProtocol.swift */; };
+		25C0CCE02025CF6C00767431 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCDF2025CF6C00767431 /* FeedViewController.swift */; };
+		25C0CCE62025D00100767431 /* FeedViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCE52025D00100767431 /* FeedViewModelProtocol.swift */; };
 		25C0CCED2025D05F00767431 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCEA2025D05F00767431 /* PictureViewController.swift */; };
-		25C0CCF32025D4BD00767431 /* LinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCF22025D4BD00767431 /* LinkCell.swift */; };
 		25C0CCF62025E3D200767431 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCF52025E3D200767431 /* Link.swift */; };
 		25C0CCFA2025E77500767431 /* LinksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCF92025E77500767431 /* LinksDataSource.swift */; };
 		25C0CCFC2025E97200767431 /* LinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCFB2025E97200767431 /* LinksList.swift */; };
@@ -50,6 +50,8 @@
 		2524044520279611008F46A9 /* URL+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Image.swift"; sourceTree = "<group>"; };
 		252404482027983E008F46A9 /* UserNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationCenter.swift; sourceTree = "<group>"; };
 		2524044A202798D7008F46A9 /* AlertNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationCenter.swift; sourceTree = "<group>"; };
+		2524044C2027B795008F46A9 /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		2524044E2027B8A6008F46A9 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		25C0CCB82025C45400767431 /* HomeTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C0CCBB2025C45400767431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25C0CCC02025C45400767431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,11 +61,9 @@
 		25C0CCCC2025C45400767431 /* HomeTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C0CCD02025C45400767431 /* HomeTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTaskTests.swift; sourceTree = "<group>"; };
 		25C0CCD22025C45400767431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		25C0CCDF2025CF6C00767431 /* LinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
-		25C0CCE32025CFB400767431 /* LinksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksViewModel.swift; sourceTree = "<group>"; };
-		25C0CCE52025D00100767431 /* LinksViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksViewModelProtocol.swift; sourceTree = "<group>"; };
+		25C0CCDF2025CF6C00767431 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
+		25C0CCE52025D00100767431 /* FeedViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelProtocol.swift; sourceTree = "<group>"; };
 		25C0CCEA2025D05F00767431 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
-		25C0CCF22025D4BD00767431 /* LinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCell.swift; sourceTree = "<group>"; };
 		25C0CCF52025E3D200767431 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		25C0CCF92025E77500767431 /* LinksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksDataSource.swift; sourceTree = "<group>"; };
 		25C0CCFB2025E97200767431 /* LinksList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksList.swift; sourceTree = "<group>"; };
@@ -171,18 +171,19 @@
 		25C0CCDB2025CCA000767431 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				25C0CCDC2025CCAF00767431 /* Links */,
+				25C0CCDC2025CCAF00767431 /* Feed */,
 				25C0CCDD2025CF2100767431 /* PicturePreview */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		25C0CCDC2025CCAF00767431 /* Links */ = {
+		25C0CCDC2025CCAF00767431 /* Feed */ = {
 			isa = PBXGroup;
 			children = (
 				25C0CCE12025CF7600767431 /* UI */,
 				25C0CCE22025CF7E00767431 /* BusinessLogic */,
 			);
+			name = Feed;
 			path = Links;
 			sourceTree = "<group>";
 		};
@@ -208,8 +209,8 @@
 			isa = PBXGroup;
 			children = (
 				25C0CCF02025D48300767431 /* Cell */,
-				25C0CCDF2025CF6C00767431 /* LinksViewController.swift */,
-				25C0CCE52025D00100767431 /* LinksViewModelProtocol.swift */,
+				25C0CCDF2025CF6C00767431 /* FeedViewController.swift */,
+				25C0CCE52025D00100767431 /* FeedViewModelProtocol.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -217,7 +218,7 @@
 		25C0CCE22025CF7E00767431 /* BusinessLogic */ = {
 			isa = PBXGroup;
 			children = (
-				25C0CCE32025CFB400767431 /* LinksViewModel.swift */,
+				2524044C2027B795008F46A9 /* FeedViewModel.swift */,
 				25C0CCF92025E77500767431 /* LinksDataSource.swift */,
 			);
 			path = BusinessLogic;
@@ -226,7 +227,7 @@
 		25C0CCF02025D48300767431 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				25C0CCF22025D4BD00767431 /* LinkCell.swift */,
+				2524044E2027B8A6008F46A9 /* FeedCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -385,18 +386,18 @@
 				25C0CCED2025D05F00767431 /* PictureViewController.swift in Sources */,
 				2524043B20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift in Sources */,
 				25C0CCFC2025E97200767431 /* LinksList.swift in Sources */,
-				25C0CCE42025CFB400767431 /* LinksViewModel.swift in Sources */,
-				25C0CCE02025CF6C00767431 /* LinksViewController.swift in Sources */,
+				25C0CCE02025CF6C00767431 /* FeedViewController.swift in Sources */,
 				25C0CD0720263FD000767431 /* Dynamic.swift in Sources */,
 				2524044620279611008F46A9 /* URL+Image.swift in Sources */,
-				25C0CCE62025D00100767431 /* LinksViewModelProtocol.swift in Sources */,
+				25C0CCE62025D00100767431 /* FeedViewModelProtocol.swift in Sources */,
+				2524044D2027B795008F46A9 /* FeedViewModel.swift in Sources */,
 				2524044320275DB2008F46A9 /* Date+String.swift in Sources */,
 				25C0CCF62025E3D200767431 /* Link.swift in Sources */,
 				25C0CD03202624B000767431 /* RedditService+LinksListDataSource.swift in Sources */,
 				25C0CD0D2026677D00767431 /* UIImageView+URL.swift in Sources */,
 				25C0CCFA2025E77500767431 /* LinksDataSource.swift in Sources */,
 				25C0CCBC2025C45400767431 /* AppDelegate.swift in Sources */,
-				25C0CCF32025D4BD00767431 /* LinkCell.swift in Sources */,
+				2524044F2027B8A6008F46A9 /* FeedCell.swift in Sources */,
 				252404492027983E008F46A9 /* UserNotificationCenter.swift in Sources */,
 				2524044B202798D7008F46A9 /* AlertNotificationCenter.swift in Sources */,
 				25C0CD0020261B0100767431 /* RedditLinksServerResponse.swift in Sources */,

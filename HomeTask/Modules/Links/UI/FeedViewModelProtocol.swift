@@ -1,5 +1,5 @@
 //
-//  LinksViewModelProtocol.swift
+//  FeedViewModelProtocol.swift
 //  HomeTask
 //
 //  Created by Zhenya Koval on 2/3/18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct LinkItem {
+struct FeedItem {
     let title: String
     let author: String
     let creationDate: Date
@@ -17,10 +17,10 @@ struct LinkItem {
     let sourceImageURL: URL?
 }
 
-protocol LinksViewModelProtocol {
+protocol FeedViewModelProtocol {
     
     var isLoading: Dynamic<Bool> { get }
-    var items: Dynamic<[LinkItem]> { get }
+    var items: Dynamic<[FeedItem]> { get }
     
     func reloadItems()
     func loadMoreItems()

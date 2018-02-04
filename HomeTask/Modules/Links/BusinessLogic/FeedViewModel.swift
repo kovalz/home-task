@@ -1,5 +1,5 @@
 //
-//  LinksViewModel.swift
+//  FeedViewModel.swift
 //  HomeTask
 //
 //  Created by Zhenya Koval on 2/3/18.
@@ -8,21 +8,25 @@
 
 import Foundation
 
-class LinksViewModel {
+class FeedViewModel {
     
     // MARK: - Public properties -
     
     let dataSource: LinksDataSource
     let userNotificationCenter: UserNotificationCenter
     
-    // MARK: LinksListViewModelProtocol
+    // MARK: FeedViewModelProtocol
 
     var isLoading: Dynamic<Bool> {
         return dataSource.isLoading
     }
 
-    let items = Dynamic([LinkItem]())
+    let items = Dynamic([FeedItem]())
 
+    // MARK: - Private properties -
+    
+    var paging = Paging()
+    
     // MARK: - Lifecycle -
     
     init(dataSource: LinksDataSource, userNotificationCenter: UserNotificationCenter) {
@@ -30,29 +34,22 @@ class LinksViewModel {
         self.userNotificationCenter = userNotificationCenter
     }
     
-    // MARK: - Private properties -
-
-    var paging = Paging()
-    
 }
 
-// MARK: - LinksListViewModelProtocol -
+// MARK: - FeedViewModelProtocol -
 
-extension LinksViewModel: LinksViewModelProtocol {
+extension FeedViewModel: FeedViewModelProtocol {
     
     func reloadItems() {
         let success: ((LinksList) -> ()) = { [weak self] linksList in
             self?.paging = Paging(after: linksList.paging.after)
             self?.items.value = linksList.links.map {
-                return LinkItem(link: $0)
+                return FeedItem(link: $0)
             }
         }
         
         let failure: ((Error) -> ()) = { [weak self] error in
             self?.userNotificationCenter.notify(about: error)
-            
-            print("LinksViewModel: failed to reload items.")
-            print(error.localizedDescription)
         }
         
         paging = Paging()
@@ -67,26 +64,21 @@ extension LinksViewModel: LinksViewModelProtocol {
             
             let oldItems = strongSelf.items.value
             let newItems = linksList.links.map {
-                return LinkItem(link: $0)
+                return FeedItem(link: $0)
             }
             
             strongSelf.paging = Paging(after: linksList.paging.after)
             strongSelf.items.value = oldItems + newItems
         }
         
-        let failure: ((Error) -> ()) = { error in
-            print("LinksViewModel: failed to load more items.")
-            print(error.localizedDescription)
-        }
-        
-        dataSource.loadLinks(paging: paging, success: success, failure: failure)
+        dataSource.loadLinks(paging: paging, success: success, failure: nil)
     }
     
 }
 
-// MARK: - LinkItem -
+// MARK: - FeedItem -
 
-extension LinkItem {
+extension FeedItem {
     
     init(link: Link) {
         title = link.title
