@@ -29,6 +29,7 @@ class LinkCell: UITableViewCell {
     @IBOutlet private weak var commentsLabel: UILabel!
     @IBOutlet private weak var thumbnailImageView: UIImageView!
     @IBOutlet private weak var thumbnailContainer: UIView!
+    @IBOutlet private weak var thumbnailButton: UIButton!
 
     // MARK: - Lifecycle
     
@@ -46,6 +47,7 @@ class LinkCell: UITableViewCell {
         thumbnailTask?.cancel()
         thumbnailTask = nil
         thumbnailImageView.image = nil
+        thumbnailButton.isEnabled = false
     }
     
     // MARK: - Private methods -
@@ -70,6 +72,8 @@ class LinkCell: UITableViewCell {
         } else {
             thumbnailContainer.isHidden = true
         }
+        
+        thumbnailButton.isEnabled = (item.sourceImageURL != nil)
     }
     
 }

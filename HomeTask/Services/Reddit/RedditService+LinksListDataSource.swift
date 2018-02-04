@@ -10,7 +10,10 @@ import Foundation
 
 extension RedditService: LinksDataSource {
     
-    func loadLinks(paging: Paging?, success: @escaping (LinksList) -> (), failure: @escaping (Error) -> ()) {
+    func loadLinks(paging: Paging?,
+                   success: ((LinksList) -> ())? = nil,
+                   failure: ((Error) -> ())? = nil)
+    {
         loadTopLinks(paging: paging, success: success, failure: failure)
     }
     

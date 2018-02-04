@@ -23,7 +23,7 @@ protocol LinksDataSource {
     var isLoading: Dynamic<Bool> { get }
 
     func loadLinks(paging: Paging?,
-                   success: @escaping (_ links: LinksList) -> (),
-                   failure: @escaping (_ error: Error) -> ())
+                   success: ((_ links: LinksList) -> ())?,
+                   failure: ((_ error: Error) -> ())?)
     
 }

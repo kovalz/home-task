@@ -13,6 +13,7 @@ class LinksViewModel {
     // MARK: - Public properties -
     
     let dataSource: LinksDataSource
+    let userNotificationCenter: UserNotificationCenter
     
     // MARK: LinksListViewModelProtocol
 
@@ -24,8 +25,9 @@ class LinksViewModel {
 
     // MARK: - Lifecycle -
     
-    init(dataSource: LinksDataSource) {
+    init(dataSource: LinksDataSource, userNotificationCenter: UserNotificationCenter) {
         self.dataSource = dataSource
+        self.userNotificationCenter = userNotificationCenter
     }
     
     // MARK: - Private properties -
@@ -46,7 +48,9 @@ extension LinksViewModel: LinksViewModelProtocol {
             }
         }
         
-        let failure: ((Error) -> ()) = { error in
+        let failure: ((Error) -> ()) = { [weak self] error in
+            self?.userNotificationCenter.notify(about: error)
+            
             print("LinksViewModel: failed to reload items.")
             print(error.localizedDescription)
         }
@@ -89,8 +93,18 @@ extension LinkItem {
         author = link.author
         creationDate = link.creationDate
         commentsCount = link.commentsCount
-        thumbnailURL = link.thumbnailURL
-        sourceImageURL = link.sourceImageURL
+        
+        if let thumbnailURL = link.thumbnailURL, thumbnailURL.isValidImageURL {
+            self.thumbnailURL = thumbnailURL
+        } else {
+            thumbnailURL = nil
+        }
+        
+        if let previewSourceURL = link.previewSourceURL, previewSourceURL.isValidImageURL {
+            sourceImageURL = previewSourceURL
+        } else {
+            sourceImageURL = nil
+        }
     }
     
 }

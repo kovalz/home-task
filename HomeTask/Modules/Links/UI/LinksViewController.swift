@@ -22,6 +22,8 @@ class LinksViewController: UIViewController {
     
     // MARK: - Private Properties -
 
+    private let refreshControl = UIRefreshControl()
+    
     // MARK: IBOutlets
 
     @IBOutlet private weak var tableView: UITableView!
@@ -32,11 +34,17 @@ class LinksViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setupRefreshControl()
         bindViewModel()
     }
     
     // MARK: - Private methods -
 
+    private func setupRefreshControl() {
+        refreshControl.addTarget(self, action: #selector(pullToRefresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
+    }
+    
     private func bindViewModel() {
         viewModel?.items.bind = { [weak self] _, _ in
             self?.tableView.reloadData()
@@ -54,10 +62,23 @@ class LinksViewController: UIViewController {
             return
         }
         
-        if viewModel.isLoading.value && viewModel.items.value.isEmpty {
+        if viewModel.isLoading.value && viewModel.items.value.isEmpty && refreshControl.isRefreshing == false {
             showActivityIndicator()
         } else {
             hideActivityIndicator()
+            refreshControl.endRefreshing()
+        }
+    }
+    
+    @objc private func pullToRefresh() {
+        guard let viewModel = viewModel else {
+            return
+        }
+        
+        if viewModel.isLoading.value == false {
+            viewModel.reloadItems()
+        } else {
+            refreshControl.endRefreshing()
         }
     }
     

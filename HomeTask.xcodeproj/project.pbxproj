@@ -10,6 +10,9 @@
 		2524043B20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524043A20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift */; };
 		2524044020272EE4008F46A9 /* GalleryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524043F20272EE4008F46A9 /* GalleryService.swift */; };
 		2524044320275DB2008F46A9 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044220275DB2008F46A9 /* Date+String.swift */; };
+		2524044620279611008F46A9 /* URL+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044520279611008F46A9 /* URL+Image.swift */; };
+		252404492027983E008F46A9 /* UserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252404482027983E008F46A9 /* UserNotificationCenter.swift */; };
+		2524044B202798D7008F46A9 /* AlertNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044A202798D7008F46A9 /* AlertNotificationCenter.swift */; };
 		25C0CCBC2025C45400767431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCBB2025C45400767431 /* AppDelegate.swift */; };
 		25C0CCC12025C45400767431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCBF2025C45400767431 /* Main.storyboard */; };
 		25C0CCC32025C45400767431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCC22025C45400767431 /* Assets.xcassets */; };
@@ -44,6 +47,9 @@
 		2524043A20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PictureViewController+UIStateRestoring.swift"; sourceTree = "<group>"; };
 		2524043F20272EE4008F46A9 /* GalleryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryService.swift; sourceTree = "<group>"; };
 		2524044220275DB2008F46A9 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
+		2524044520279611008F46A9 /* URL+Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URL+Image.swift"; sourceTree = "<group>"; };
+		252404482027983E008F46A9 /* UserNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNotificationCenter.swift; sourceTree = "<group>"; };
+		2524044A202798D7008F46A9 /* AlertNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationCenter.swift; sourceTree = "<group>"; };
 		25C0CCB82025C45400767431 /* HomeTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C0CCBB2025C45400767431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25C0CCC02025C45400767431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -100,6 +106,23 @@
 				2524044220275DB2008F46A9 /* Date+String.swift */,
 			);
 			path = Date;
+			sourceTree = "<group>";
+		};
+		25240444202795FD008F46A9 /* URL */ = {
+			isa = PBXGroup;
+			children = (
+				2524044520279611008F46A9 /* URL+Image.swift */,
+			);
+			path = URL;
+			sourceTree = "<group>";
+		};
+		2524044720279810008F46A9 /* UserNotifications */ = {
+			isa = PBXGroup;
+			children = (
+				252404482027983E008F46A9 /* UserNotificationCenter.swift */,
+				2524044A202798D7008F46A9 /* AlertNotificationCenter.swift */,
+			);
+			path = UserNotifications;
 			sourceTree = "<group>";
 		};
 		25C0CCAF2025C45400767431 = {
@@ -175,8 +198,8 @@
 		25C0CCDE2025CF4600767431 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				2524043E20272EB7008F46A9 /* Gallery */,
 				25C0CD012026244D00767431 /* Reddit */,
+				2524043E20272EB7008F46A9 /* Gallery */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -230,6 +253,8 @@
 		25C0CD0420263FA300767431 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2524044720279810008F46A9 /* UserNotifications */,
+				25240444202795FD008F46A9 /* URL */,
 				2524044120275D9F008F46A9 /* Date */,
 				25C0CD0B2026676100767431 /* UIKit */,
 				25C0CD0520263FBF00767431 /* Observer */,
@@ -363,6 +388,7 @@
 				25C0CCE42025CFB400767431 /* LinksViewModel.swift in Sources */,
 				25C0CCE02025CF6C00767431 /* LinksViewController.swift in Sources */,
 				25C0CD0720263FD000767431 /* Dynamic.swift in Sources */,
+				2524044620279611008F46A9 /* URL+Image.swift in Sources */,
 				25C0CCE62025D00100767431 /* LinksViewModelProtocol.swift in Sources */,
 				2524044320275DB2008F46A9 /* Date+String.swift in Sources */,
 				25C0CCF62025E3D200767431 /* Link.swift in Sources */,
@@ -371,6 +397,8 @@
 				25C0CCFA2025E77500767431 /* LinksDataSource.swift in Sources */,
 				25C0CCBC2025C45400767431 /* AppDelegate.swift in Sources */,
 				25C0CCF32025D4BD00767431 /* LinkCell.swift in Sources */,
+				252404492027983E008F46A9 /* UserNotificationCenter.swift in Sources */,
+				2524044B202798D7008F46A9 /* AlertNotificationCenter.swift in Sources */,
 				25C0CD0020261B0100767431 /* RedditLinksServerResponse.swift in Sources */,
 				25C0CCFE2025EAEA00767431 /* RedditService.swift in Sources */,
 			);

@@ -23,7 +23,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let reddit = RedditService()
-        let viewModel = LinksViewModel(dataSource: reddit)
+        let alertNotificationCenter = AlertNotificationCenter(rootViewController: viewController)
+        let viewModel = LinksViewModel(dataSource: reddit, userNotificationCenter: alertNotificationCenter)
         viewController.viewModel = viewModel
         
         return true

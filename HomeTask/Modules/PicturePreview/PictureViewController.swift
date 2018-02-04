@@ -23,6 +23,7 @@ class PictureViewController: UIViewController {
     // MARK: - Private Properties -
     
     private let gallery = GalleryService()
+    lazy private var userNotificationCenter = AlertNotificationCenter(rootViewController: self)
 
     // MARK: IBOutlets
     
@@ -42,9 +43,12 @@ class PictureViewController: UIViewController {
     private func updateUI() {
         if let pictureURL = pictureURL {
             showActivityIndicator()
-            imageView.setImage(with: pictureURL) { [weak self] success in
+            imageView.setImage(with: pictureURL) { [weak self] error in
                 self?.hideActivityIndicator()
-                // TODO: handle failed case
+
+                if let error = error {
+                    self?.userNotificationCenter.notify(about: error)
+                }
             }
         } else {
             imageView.image = nil
@@ -62,15 +66,24 @@ class PictureViewController: UIViewController {
         saveButton.isEnabled = (imageView.image != nil)
     }
     
+    private func save(image: UIImage) {
+        showActivityIndicator()
+        gallery.save(image: image) { [weak self] success, error in
+            self?.hideActivityIndicator()
+            
+            if let error = error {
+                self?.userNotificationCenter.notify(about: error)
+            } else if success {
+                self?.userNotificationCenter.notify(title: "Saved!", message: "Picture was successfuly saved to gallery.")
+            }
+        }
+    }
+    
     // MARK: IBActions
     
     @IBAction private func tapSave() {
         if let image = imageView.image {
-            showActivityIndicator()
-            gallery.save(image: image) { [weak self] error in
-                self?.hideActivityIndicator()
-                // TODO: notify user about result
-            }
+           save(image: image)
         }
     }
     

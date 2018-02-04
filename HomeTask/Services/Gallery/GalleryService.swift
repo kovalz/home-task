@@ -12,14 +12,30 @@ import Photos
 
 class GalleryService {
     
-    func save(image: UIImage, completion: ((_ error: Error?) -> ())? = nil) {
-        PHPhotoLibrary.shared().performChanges({
-            PHAssetCreationRequest.creationRequestForAsset(from: image)
-        }, completionHandler: { success, error in
-            DispatchQueue.main.async {
-                completion?(error)
+    func save(image: UIImage, completion: ((_ success: Bool, _ error: Error?) -> ())? = nil) {
+        let save = {
+            PHPhotoLibrary.shared().performChanges({
+                PHAssetCreationRequest.creationRequestForAsset(from: image)
+            }, completionHandler: { success, error in
+                DispatchQueue.main.async {
+                    completion?(success, error)
+                }
+            })
+        }
+        
+        if PHPhotoLibrary.authorizationStatus() == .notDetermined {
+            PHPhotoLibrary.requestAuthorization { (status) in
+                if status == .authorized {
+                    save()
+                } else {
+                    DispatchQueue.main.async {
+                        completion?(false, nil)
+                    }
+                }
             }
-        })
+        } else {
+            save()
+        }
     }
     
 }

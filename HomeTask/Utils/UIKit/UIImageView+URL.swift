@@ -11,25 +11,37 @@ import UIKit
 
 extension UIImageView {
     
-    @discardableResult func setImage(with url: URL, completion: ((_ success: Bool) -> ())? = nil) -> URLSessionTask {
-        let task = URLSession.shared.dataTask(with: url) { data, _, _ in
+    enum ErrorKind: Swift.Error {
+        case unableToCreateImage
+        case emptyResponseData
+    }
+    
+    @discardableResult func setImage(with url: URL, completion: ((_ error: Error?) -> ())? = nil) -> URLSessionTask {
+        let task = URLSession.shared.dataTask(with: url) { data, response, error in
+            if let error = error {
+                DispatchQueue.main.async {
+                    completion?(error)
+                }
+                return
+            }
+            
             guard let data = data else {
                 DispatchQueue.main.async {
-                    completion?(false)
+                    completion?(ErrorKind.emptyResponseData)
                 }
                 return
             }
             
             guard let image = UIImage(data: data) else {
                 DispatchQueue.main.async {
-                    completion?(false)
+                    completion?(ErrorKind.unableToCreateImage)
                 }
                 return
             }
             
             DispatchQueue.main.async {
                 self.image = image
-                completion?(true)
+                completion?(nil)
             }
         }
         
