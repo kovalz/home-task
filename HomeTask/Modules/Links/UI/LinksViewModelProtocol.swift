@@ -14,6 +14,7 @@ struct LinkItem {
     let creationDate: Date
     let commentsCount: Int
     let thumbnailURL: URL?
+    let sourceImageURL: URL?
 }
 
 protocol LinksViewModelProtocol {

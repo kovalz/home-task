@@ -86,6 +86,7 @@ extension LinkItem {
         creationDate = link.creationDate
         commentsCount = link.commentsCount
         thumbnailURL = link.thumbnailURL
+        sourceImageURL = link.sourceImageURL
     }
     
 }

@@ -13,7 +13,7 @@
         <!--Navigation Controller-->
         <scene sceneID="30j-Fv-3Qb">
             <objects>
-                <navigationController id="RER-n3-qo6" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="RootNavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="RER-n3-qo6" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5OK-NI-txW">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -29,7 +29,7 @@
         <!--Top Links-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LinksViewController" customModule="HomeTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LinksViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="LinksViewController" customModule="HomeTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +144,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Hur-hi-lfT">
             <objects>
-                <navigationController id="MWW-jS-Xzd" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavigationController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="MWW-jS-Xzd" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Wtb-DD-AZ4">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -160,13 +160,22 @@
         <!--Preview-->
         <scene sceneID="nLC-gb-vZQ">
             <objects>
-                <exit id="Vc0-BV-SZf" userLabel="Exit" sceneMemberID="exit"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7hq-d0-HZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="06k-LC-SDs" customClass="PictureViewController" customModule="HomeTask" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PictureViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="06k-LC-SDs" customClass="PictureViewController" customModule="HomeTask" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JIc-jx-JzL">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l0K-Am-cn4">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="l0K-Am-cn4" secondAttribute="bottom" id="46E-0d-SOJ"/>
+                            <constraint firstItem="l0K-Am-cn4" firstAttribute="leading" secondItem="JIc-jx-JzL" secondAttribute="leading" id="I1V-SF-d78"/>
+                            <constraint firstAttribute="trailing" secondItem="l0K-Am-cn4" secondAttribute="trailing" id="bdD-eE-dSf"/>
+                            <constraint firstItem="l0K-Am-cn4" firstAttribute="top" secondItem="h5u-qi-wg0" secondAttribute="top" id="tbZ-10-vTb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="h5u-qi-wg0"/>
                     </view>
                     <navigationItem key="navigationItem" title="Preview" id="7ux-PB-3r5">
@@ -177,7 +186,12 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="rEM-4T-l3d"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="imageView" destination="l0K-Am-cn4" id="zZl-T2-6aO"/>
+                    </connections>
                 </viewController>
+                <exit id="Vc0-BV-SZf" userLabel="Exit" sceneMemberID="exit"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7hq-d0-HZO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1100" y="107"/>
         </scene>

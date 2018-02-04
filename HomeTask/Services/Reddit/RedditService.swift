@@ -120,12 +120,17 @@ class RedditService {
     private func decodeLinks(from jsonData: Data) throws -> LinksList {
         let serverLinks = try JSONDecoder().decode(RedditLinksServerResponse.self, from: jsonData)
         let paging = LinksList.Paging(after: serverLinks.data.after)
-        let links = serverLinks.data.children.map {
+        let links: [Link] = serverLinks.data.children.map {
+            
+            let thumbnailURLString = $0.data.thumbnail
+            let sourceImageURLString = $0.data.preview?.images.first?.source.url
+
             return Link(title: $0.data.title,
                         author: $0.data.author,
                         creationDate: Date(timeIntervalSince1970: $0.data.created),
                         commentsCount: $0.data.num_comments,
-                        thumbnailURL: $0.data.thumbnail.flatMap { URL(string: $0) } )
+                        thumbnailURL: thumbnailURLString.flatMap { URL(string: $0) },
+                        sourceImageURL: sourceImageURLString.flatMap { URL(string: $0) })
         }
         
         return LinksList(links: links, paging: paging)

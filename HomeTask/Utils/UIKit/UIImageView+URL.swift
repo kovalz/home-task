@@ -11,7 +11,7 @@ import UIKit
 
 extension UIImageView {
     
-    func setImage(with url: URL) -> URLSessionTask {
+    @discardableResult func setImage(with url: URL) -> URLSessionTask {
         let task = URLSession.shared.dataTask(with: url) { data, _, _ in
             guard let data = data else {
                 return

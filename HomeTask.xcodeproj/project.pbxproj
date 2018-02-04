@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2524043B20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524043A20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift */; };
 		25C0CCBC2025C45400767431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCBB2025C45400767431 /* AppDelegate.swift */; };
 		25C0CCC12025C45400767431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCBF2025C45400767431 /* Main.storyboard */; };
 		25C0CCC32025C45400767431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCC22025C45400767431 /* Assets.xcassets */; };
@@ -15,9 +16,7 @@
 		25C0CCE02025CF6C00767431 /* LinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCDF2025CF6C00767431 /* LinksViewController.swift */; };
 		25C0CCE42025CFB400767431 /* LinksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCE32025CFB400767431 /* LinksViewModel.swift */; };
 		25C0CCE62025D00100767431 /* LinksViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCE52025D00100767431 /* LinksViewModelProtocol.swift */; };
-		25C0CCEC2025D05F00767431 /* PictureViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCE82025D05F00767431 /* PictureViewModel.swift */; };
 		25C0CCED2025D05F00767431 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCEA2025D05F00767431 /* PictureViewController.swift */; };
-		25C0CCEE2025D05F00767431 /* PictureViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCEB2025D05F00767431 /* PictureViewModelProtocol.swift */; };
 		25C0CCF32025D4BD00767431 /* LinkCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCF22025D4BD00767431 /* LinkCell.swift */; };
 		25C0CCF62025E3D200767431 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCF52025E3D200767431 /* Link.swift */; };
 		25C0CCFA2025E77500767431 /* LinksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCF92025E77500767431 /* LinksDataSource.swift */; };
@@ -40,6 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2524043A20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PictureViewController+UIStateRestoring.swift"; sourceTree = "<group>"; };
 		25C0CCB82025C45400767431 /* HomeTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C0CCBB2025C45400767431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25C0CCC02025C45400767431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,9 +52,7 @@
 		25C0CCDF2025CF6C00767431 /* LinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksViewController.swift; sourceTree = "<group>"; };
 		25C0CCE32025CFB400767431 /* LinksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksViewModel.swift; sourceTree = "<group>"; };
 		25C0CCE52025D00100767431 /* LinksViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksViewModelProtocol.swift; sourceTree = "<group>"; };
-		25C0CCE82025D05F00767431 /* PictureViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewModel.swift; sourceTree = "<group>"; };
 		25C0CCEA2025D05F00767431 /* PictureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewController.swift; sourceTree = "<group>"; };
-		25C0CCEB2025D05F00767431 /* PictureViewModelProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureViewModelProtocol.swift; sourceTree = "<group>"; };
 		25C0CCF22025D4BD00767431 /* LinkCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkCell.swift; sourceTree = "<group>"; };
 		25C0CCF52025E3D200767431 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
 		25C0CCF92025E77500767431 /* LinksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinksDataSource.swift; sourceTree = "<group>"; };
@@ -108,7 +106,7 @@
 				25C0CCBB2025C45400767431 /* AppDelegate.swift */,
 				25C0CCF42025E26C00767431 /* Models */,
 				25C0CCDB2025CCA000767431 /* Modules */,
-				25C0CCEF2025D1D100767431 /* Services */,
+				25C0CCDE2025CF4600767431 /* Services */,
 				25C0CD0420263FA300767431 /* Utils */,
 				25C0CCBF2025C45400767431 /* Main.storyboard */,
 				25C0CCC22025C45400767431 /* Assets.xcassets */,
@@ -132,7 +130,6 @@
 			children = (
 				25C0CCDC2025CCAF00767431 /* Links */,
 				25C0CCDD2025CF2100767431 /* PicturePreview */,
-				25C0CCDE2025CF4600767431 /* Services */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -149,8 +146,8 @@
 		25C0CCDD2025CF2100767431 /* PicturePreview */ = {
 			isa = PBXGroup;
 			children = (
-				25C0CCE92025D05F00767431 /* UI */,
-				25C0CCE72025D05F00767431 /* BusinessLogic */,
+				25C0CCEA2025D05F00767431 /* PictureViewController.swift */,
+				2524043A20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift */,
 			);
 			path = PicturePreview;
 			sourceTree = "<group>";
@@ -160,8 +157,7 @@
 			children = (
 				25C0CD012026244D00767431 /* Reddit */,
 			);
-			name = Services;
-			path = ../Services;
+			path = Services;
 			sourceTree = "<group>";
 		};
 		25C0CCE12025CF7600767431 /* UI */ = {
@@ -181,31 +177,6 @@
 				25C0CCF92025E77500767431 /* LinksDataSource.swift */,
 			);
 			path = BusinessLogic;
-			sourceTree = "<group>";
-		};
-		25C0CCE72025D05F00767431 /* BusinessLogic */ = {
-			isa = PBXGroup;
-			children = (
-				25C0CCE82025D05F00767431 /* PictureViewModel.swift */,
-			);
-			path = BusinessLogic;
-			sourceTree = "<group>";
-		};
-		25C0CCE92025D05F00767431 /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				25C0CCEA2025D05F00767431 /* PictureViewController.swift */,
-				25C0CCEB2025D05F00767431 /* PictureViewModelProtocol.swift */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		25C0CCEF2025D1D100767431 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Services;
-			path = Modules/Services;
 			sourceTree = "<group>";
 		};
 		25C0CCF02025D48300767431 /* Cell */ = {
@@ -364,11 +335,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				25C0CCED2025D05F00767431 /* PictureViewController.swift in Sources */,
+				2524043B20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift in Sources */,
 				25C0CCFC2025E97200767431 /* LinksList.swift in Sources */,
 				25C0CCE42025CFB400767431 /* LinksViewModel.swift in Sources */,
 				25C0CCE02025CF6C00767431 /* LinksViewController.swift in Sources */,
-				25C0CCEC2025D05F00767431 /* PictureViewModel.swift in Sources */,
-				25C0CCEE2025D05F00767431 /* PictureViewModelProtocol.swift in Sources */,
 				25C0CD0720263FD000767431 /* Dynamic.swift in Sources */,
 				25C0CCE62025D00100767431 /* LinksViewModelProtocol.swift in Sources */,
 				25C0CCF62025E3D200767431 /* Link.swift in Sources */,

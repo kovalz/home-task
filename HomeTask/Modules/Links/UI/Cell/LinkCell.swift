@@ -61,7 +61,25 @@ class LinkCell: UITableViewCell {
         if let thumbnailURL = item.thumbnailURL {
             thumbnailTask = thumbnailImageView?.setImage(with: thumbnailURL)
         }
-
     }
     
 }
+
+// MARK: - UIView + LinkCell -
+
+extension UIView {
+    
+    var linkCell: LinkCell? {
+        var view: UIView? = self
+        while view != nil {
+            if let cell = view?.superview as? LinkCell {
+                return cell
+            }
+            
+            view = view?.superview
+        }
+        return nil
+    }
+    
+}
+
