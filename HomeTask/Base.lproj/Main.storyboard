@@ -168,13 +168,18 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="l0K-Am-cn4">
                                 <rect key="frame" x="0.0" y="88" width="375" height="724"/>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="JVO-vb-ek7">
+                                <rect key="frame" x="177" y="396" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="l0K-Am-cn4" secondAttribute="bottom" id="46E-0d-SOJ"/>
                             <constraint firstItem="l0K-Am-cn4" firstAttribute="leading" secondItem="JIc-jx-JzL" secondAttribute="leading" id="I1V-SF-d78"/>
                             <constraint firstAttribute="trailing" secondItem="l0K-Am-cn4" secondAttribute="trailing" id="bdD-eE-dSf"/>
+                            <constraint firstItem="JVO-vb-ek7" firstAttribute="centerX" secondItem="JIc-jx-JzL" secondAttribute="centerX" id="dTW-vF-EZU"/>
                             <constraint firstItem="l0K-Am-cn4" firstAttribute="top" secondItem="h5u-qi-wg0" secondAttribute="top" id="tbZ-10-vTb"/>
+                            <constraint firstItem="JVO-vb-ek7" firstAttribute="centerY" secondItem="JIc-jx-JzL" secondAttribute="centerY" id="woQ-T0-aSP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="h5u-qi-wg0"/>
                     </view>
@@ -184,10 +189,16 @@
                                 <segue destination="Vc0-BV-SZf" kind="unwind" unwindAction="unwindWithUnwindSegue:" id="9bR-Hn-f0j"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rEM-4T-l3d"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="rEM-4T-l3d">
+                            <connections>
+                                <action selector="tapSave" destination="06k-LC-SDs" id="ZBu-s3-rHH"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="JVO-vb-ek7" id="rXs-Eg-f1c"/>
                         <outlet property="imageView" destination="l0K-Am-cn4" id="zZl-T2-6aO"/>
+                        <outlet property="saveButton" destination="rEM-4T-l3d" id="GNf-cA-mwx"/>
                     </connections>
                 </viewController>
                 <exit id="Vc0-BV-SZf" userLabel="Exit" sceneMemberID="exit"/>

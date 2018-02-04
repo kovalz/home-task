@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2524043B20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524043A20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift */; };
+		2524044020272EE4008F46A9 /* GalleryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524043F20272EE4008F46A9 /* GalleryService.swift */; };
 		25C0CCBC2025C45400767431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCBB2025C45400767431 /* AppDelegate.swift */; };
 		25C0CCC12025C45400767431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCBF2025C45400767431 /* Main.storyboard */; };
 		25C0CCC32025C45400767431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCC22025C45400767431 /* Assets.xcassets */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		2524043A20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PictureViewController+UIStateRestoring.swift"; sourceTree = "<group>"; };
+		2524043F20272EE4008F46A9 /* GalleryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryService.swift; sourceTree = "<group>"; };
 		25C0CCB82025C45400767431 /* HomeTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C0CCBB2025C45400767431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25C0CCC02025C45400767431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2524043E20272EB7008F46A9 /* Gallery */ = {
+			isa = PBXGroup;
+			children = (
+				2524043F20272EE4008F46A9 /* GalleryService.swift */,
+			);
+			path = Gallery;
+			sourceTree = "<group>";
+		};
 		25C0CCAF2025C45400767431 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +165,7 @@
 		25C0CCDE2025CF4600767431 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				2524043E20272EB7008F46A9 /* Gallery */,
 				25C0CD012026244D00767431 /* Reddit */,
 			);
 			path = Services;
@@ -334,6 +345,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2524044020272EE4008F46A9 /* GalleryService.swift in Sources */,
 				25C0CCED2025D05F00767431 /* PictureViewController.swift in Sources */,
 				2524043B20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift in Sources */,
 				25C0CCFC2025E97200767431 /* LinksList.swift in Sources */,
