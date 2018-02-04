@@ -25,7 +25,8 @@ class LinksViewController: UIViewController {
     // MARK: IBOutlets
 
     @IBOutlet private weak var tableView: UITableView!
-    
+    @IBOutlet private weak var activityIndicatorView: UIActivityIndicatorView!
+
     // MARK: - Lifecycle -
 
     override func viewDidLoad() {
@@ -41,7 +42,33 @@ class LinksViewController: UIViewController {
             self?.tableView.reloadData()
         }
         
+        viewModel?.isLoading.bind = { [weak self] _, _ in
+            self?.handleLoadingState()
+        }
+        
         viewModel?.reloadItems()
+    }
+    
+    private func handleLoadingState() {
+        guard let viewModel = viewModel else {
+            return
+        }
+        
+        if viewModel.isLoading.value && viewModel.items.value.isEmpty {
+            showActivityIndicator()
+        } else {
+            hideActivityIndicator()
+        }
+    }
+    
+    private func showActivityIndicator() {
+        activityIndicatorView.isHidden = false
+        tableView.isHidden = true
+    }
+    
+    private func hideActivityIndicator() {
+        activityIndicatorView.isHidden = true
+        tableView.isHidden = false
     }
 
 }

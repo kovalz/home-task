@@ -28,7 +28,8 @@ class LinkCell: UITableViewCell {
     @IBOutlet private weak var infoLabel: UILabel!
     @IBOutlet private weak var commentsLabel: UILabel!
     @IBOutlet private weak var thumbnailImageView: UIImageView!
-    
+    @IBOutlet private weak var thumbnailContainer: UIView!
+
     // MARK: - Lifecycle
     
     override func awakeFromNib() {
@@ -55,11 +56,19 @@ class LinkCell: UITableViewCell {
         }
         
         titleLabel.text = item.title
-        infoLabel.text = item.author
-        commentsLabel.text = "\(item.commentsCount)"
+        infoLabel.text = "submitted " + item.creationDate.hoursAgoString + " by " + item.author
+        
+        if item.commentsCount == 1 {
+            commentsLabel.text = "\(item.commentsCount) comment"
+        } else {
+            commentsLabel.text = "\(item.commentsCount) comments"
+        }
         
         if let thumbnailURL = item.thumbnailURL {
+            thumbnailContainer.isHidden = false
             thumbnailTask = thumbnailImageView?.setImage(with: thumbnailURL)
+        } else {
+            thumbnailContainer.isHidden = true
         }
     }
     

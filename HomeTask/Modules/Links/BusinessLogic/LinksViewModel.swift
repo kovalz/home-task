@@ -16,6 +16,10 @@ class LinksViewModel {
     
     // MARK: LinksListViewModelProtocol
 
+    var isLoading: Dynamic<Bool> {
+        return dataSource.isLoading
+    }
+
     let items = Dynamic([LinkItem]())
 
     // MARK: - Lifecycle -

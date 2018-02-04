@@ -20,8 +20,8 @@ struct Paging {
 
 protocol LinksDataSource {
     
-    var isLoading: Bool { get }
-    
+    var isLoading: Dynamic<Bool> { get }
+
     func loadLinks(paging: Paging?,
                    success: @escaping (_ links: LinksList) -> (),
                    failure: @escaping (_ error: Error) -> ())

@@ -34,7 +34,7 @@ struct RedditLinksServerResponse: Decodable {
                 
                 let title: String
                 let author: String
-                let created: TimeInterval
+                let created_utc: TimeInterval
                 let num_comments: Int
                 let thumbnail: String?
                 let preview: Preview?

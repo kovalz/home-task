@@ -19,6 +19,7 @@ struct LinkItem {
 
 protocol LinksViewModelProtocol {
     
+    var isLoading: Dynamic<Bool> { get }
     var items: Dynamic<[LinkItem]> { get }
     
     func reloadItems()

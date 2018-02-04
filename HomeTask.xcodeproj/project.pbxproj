@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2524043B20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524043A20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift */; };
 		2524044020272EE4008F46A9 /* GalleryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524043F20272EE4008F46A9 /* GalleryService.swift */; };
+		2524044320275DB2008F46A9 /* Date+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044220275DB2008F46A9 /* Date+String.swift */; };
 		25C0CCBC2025C45400767431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCBB2025C45400767431 /* AppDelegate.swift */; };
 		25C0CCC12025C45400767431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCBF2025C45400767431 /* Main.storyboard */; };
 		25C0CCC32025C45400767431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCC22025C45400767431 /* Assets.xcassets */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		2524043A20272CC6008F46A9 /* PictureViewController+UIStateRestoring.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PictureViewController+UIStateRestoring.swift"; sourceTree = "<group>"; };
 		2524043F20272EE4008F46A9 /* GalleryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryService.swift; sourceTree = "<group>"; };
+		2524044220275DB2008F46A9 /* Date+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+String.swift"; sourceTree = "<group>"; };
 		25C0CCB82025C45400767431 /* HomeTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C0CCBB2025C45400767431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25C0CCC02025C45400767431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -90,6 +92,14 @@
 				2524043F20272EE4008F46A9 /* GalleryService.swift */,
 			);
 			path = Gallery;
+			sourceTree = "<group>";
+		};
+		2524044120275D9F008F46A9 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				2524044220275DB2008F46A9 /* Date+String.swift */,
+			);
+			path = Date;
 			sourceTree = "<group>";
 		};
 		25C0CCAF2025C45400767431 = {
@@ -220,6 +230,7 @@
 		25C0CD0420263FA300767431 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				2524044120275D9F008F46A9 /* Date */,
 				25C0CD0B2026676100767431 /* UIKit */,
 				25C0CD0520263FBF00767431 /* Observer */,
 			);
@@ -353,6 +364,7 @@
 				25C0CCE02025CF6C00767431 /* LinksViewController.swift in Sources */,
 				25C0CD0720263FD000767431 /* Dynamic.swift in Sources */,
 				25C0CCE62025D00100767431 /* LinksViewModelProtocol.swift in Sources */,
+				2524044320275DB2008F46A9 /* Date+String.swift in Sources */,
 				25C0CCF62025E3D200767431 /* Link.swift in Sources */,
 				25C0CD03202624B000767431 /* RedditService+LinksListDataSource.swift in Sources */,
 				25C0CD0D2026677D00767431 /* UIImageView+URL.swift in Sources */,
