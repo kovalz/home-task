@@ -52,11 +52,11 @@ class RedditService {
 
     }
     
-    // MARK: - Public properties
+    // MARK: - Public properties -
     
     let isLoading = Dynamic(false)
 
-    // MARK: - Public methods
+    // MARK: - Public methods -
     
     func loadTopLinks(paging: Paging? = nil,
                       success: ((_ links: LinksList) -> ())? = nil,
@@ -115,7 +115,7 @@ class RedditService {
         task.resume()
     }
         
-    // MARK: - Private methods
+    // MARK: - Private methods -
     
     private func decodeLinks(from jsonData: Data) throws -> LinksList {
         let serverLinks = try JSONDecoder().decode(RedditLinksServerResponse.self, from: jsonData)

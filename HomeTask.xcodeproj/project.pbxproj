@@ -15,11 +15,22 @@
 		2524044B202798D7008F46A9 /* AlertNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044A202798D7008F46A9 /* AlertNotificationCenter.swift */; };
 		2524044D2027B795008F46A9 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044C2027B795008F46A9 /* FeedViewModel.swift */; };
 		2524044F2027B8A6008F46A9 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044E2027B8A6008F46A9 /* FeedCell.swift */; };
+		252404532027BBE8008F46A9 /* FakeLinksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252404522027BBE8008F46A9 /* FakeLinksDataSource.swift */; };
+		252404542027BC31008F46A9 /* LinksDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCF92025E77500767431 /* LinksDataSource.swift */; };
+		252404552027BC4C008F46A9 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCF52025E3D200767431 /* Link.swift */; };
+		252404562027BC4C008F46A9 /* LinksList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCFB2025E97200767431 /* LinksList.swift */; };
+		252404572027BC54008F46A9 /* FeedViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCE52025D00100767431 /* FeedViewModelProtocol.swift */; };
+		252404582027BC58008F46A9 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044C2027B795008F46A9 /* FeedViewModel.swift */; };
+		252404592027BC68008F46A9 /* UserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252404482027983E008F46A9 /* UserNotificationCenter.swift */; };
+		2524045B2027BD08008F46A9 /* FakeUserNotificationCenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524045A2027BD08008F46A9 /* FakeUserNotificationCenter.swift */; };
+		2524045C2027BED9008F46A9 /* Dynamic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CD0620263FD000767431 /* Dynamic.swift */; };
+		2524045D2027BEF8008F46A9 /* URL+Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524044520279611008F46A9 /* URL+Image.swift */; };
+		2524045F2027C021008F46A9 /* FakeLinks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2524045E2027C021008F46A9 /* FakeLinks.swift */; };
+		252404622027C252008F46A9 /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 252404602027C252008F46A9 /* FeedViewModelTests.swift */; };
 		25C0CCBC2025C45400767431 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCBB2025C45400767431 /* AppDelegate.swift */; };
 		25C0CCC12025C45400767431 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCBF2025C45400767431 /* Main.storyboard */; };
 		25C0CCC32025C45400767431 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCC22025C45400767431 /* Assets.xcassets */; };
 		25C0CCC62025C45400767431 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 25C0CCC42025C45400767431 /* LaunchScreen.storyboard */; };
-		25C0CCD12025C45400767431 /* HomeTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCD02025C45400767431 /* HomeTaskTests.swift */; };
 		25C0CCE02025CF6C00767431 /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCDF2025CF6C00767431 /* FeedViewController.swift */; };
 		25C0CCE62025D00100767431 /* FeedViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCE52025D00100767431 /* FeedViewModelProtocol.swift */; };
 		25C0CCED2025D05F00767431 /* PictureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25C0CCEA2025D05F00767431 /* PictureViewController.swift */; };
@@ -52,6 +63,10 @@
 		2524044A202798D7008F46A9 /* AlertNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertNotificationCenter.swift; sourceTree = "<group>"; };
 		2524044C2027B795008F46A9 /* FeedViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		2524044E2027B8A6008F46A9 /* FeedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
+		252404522027BBE8008F46A9 /* FakeLinksDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLinksDataSource.swift; sourceTree = "<group>"; };
+		2524045A2027BD08008F46A9 /* FakeUserNotificationCenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeUserNotificationCenter.swift; sourceTree = "<group>"; };
+		2524045E2027C021008F46A9 /* FakeLinks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeLinks.swift; sourceTree = "<group>"; };
+		252404602027C252008F46A9 /* FeedViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedViewModelTests.swift; sourceTree = "<group>"; };
 		25C0CCB82025C45400767431 /* HomeTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		25C0CCBB2025C45400767431 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		25C0CCC02025C45400767431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,7 +74,6 @@
 		25C0CCC52025C45400767431 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		25C0CCC72025C45400767431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25C0CCCC2025C45400767431 /* HomeTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HomeTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		25C0CCD02025C45400767431 /* HomeTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTaskTests.swift; sourceTree = "<group>"; };
 		25C0CCD22025C45400767431 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		25C0CCDF2025CF6C00767431 /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
 		25C0CCE52025D00100767431 /* FeedViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelProtocol.swift; sourceTree = "<group>"; };
@@ -125,6 +139,24 @@
 			path = UserNotifications;
 			sourceTree = "<group>";
 		};
+		252404502027BA94008F46A9 /* FeedViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				252404602027C252008F46A9 /* FeedViewModelTests.swift */,
+			);
+			path = FeedViewModel;
+			sourceTree = "<group>";
+		};
+		252404512027BBC1008F46A9 /* FakeObjects */ = {
+			isa = PBXGroup;
+			children = (
+				252404522027BBE8008F46A9 /* FakeLinksDataSource.swift */,
+				2524045A2027BD08008F46A9 /* FakeUserNotificationCenter.swift */,
+				2524045E2027C021008F46A9 /* FakeLinks.swift */,
+			);
+			path = FakeObjects;
+			sourceTree = "<group>";
+		};
 		25C0CCAF2025C45400767431 = {
 			isa = PBXGroup;
 			children = (
@@ -162,7 +194,8 @@
 		25C0CCCF2025C45400767431 /* HomeTaskTests */ = {
 			isa = PBXGroup;
 			children = (
-				25C0CCD02025C45400767431 /* HomeTaskTests.swift */,
+				252404512027BBC1008F46A9 /* FakeObjects */,
+				252404502027BA94008F46A9 /* FeedViewModel */,
 				25C0CCD22025C45400767431 /* Info.plist */,
 			);
 			path = HomeTaskTests;
@@ -409,7 +442,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				25C0CCD12025C45400767431 /* HomeTaskTests.swift in Sources */,
+				252404582027BC58008F46A9 /* FeedViewModel.swift in Sources */,
+				252404622027C252008F46A9 /* FeedViewModelTests.swift in Sources */,
+				2524045C2027BED9008F46A9 /* Dynamic.swift in Sources */,
+				2524045F2027C021008F46A9 /* FakeLinks.swift in Sources */,
+				252404572027BC54008F46A9 /* FeedViewModelProtocol.swift in Sources */,
+				252404562027BC4C008F46A9 /* LinksList.swift in Sources */,
+				2524045B2027BD08008F46A9 /* FakeUserNotificationCenter.swift in Sources */,
+				252404532027BBE8008F46A9 /* FakeLinksDataSource.swift in Sources */,
+				2524045D2027BEF8008F46A9 /* URL+Image.swift in Sources */,
+				252404542027BC31008F46A9 /* LinksDataSource.swift in Sources */,
+				252404592027BC68008F46A9 /* UserNotificationCenter.swift in Sources */,
+				252404552027BC4C008F46A9 /* Link.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

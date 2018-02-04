@@ -25,7 +25,7 @@ class FeedViewModel {
 
     // MARK: - Private properties -
     
-    var paging = Paging()
+    private var paging = Paging()
     
     // MARK: - Lifecycle -
     
